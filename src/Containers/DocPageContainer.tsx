@@ -12,6 +12,7 @@ import ListItem from "@mui/joy/ListItem"
 import MethodsListItem from "../Components/MethodsListItem"
 import DocPageNav from "../Components/DocPageNav"
 import Footer from "./Footer"
+import CodeBlock from "../Components/CodeBlock"
 
 export const renderStarIcons = (value: number) => {
     const stars: React.ReactNode[] = []
@@ -63,9 +64,7 @@ export default function DocPageContainer({pageIndex, showSideNav}: {pageIndex: n
             <br />
             <Typography level="title-lg" ref={refs[2]}>שימוש</Typography>
             <Divider/>
-            <Card variant="soft" sx={(theme) => ({background: theme.colorSchemes.dark.palette.background.level1})}>
-            <code style={{direction: "ltr", background: "none"}} className="prettyprint">{pages[pageIndex].usageSyntax}</code>
-            </Card>
+            <CodeBlock>{pages[pageIndex].usageSyntax}</CodeBlock>
             <br />
             <Typography level="title-lg" ref={refs[3]}>פעולות</Typography>
             <Divider/>

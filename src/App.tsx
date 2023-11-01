@@ -12,7 +12,7 @@ import { useTheme } from "@mui/material/styles"
 import Drawer from '@mui/joy/Drawer'
 import LandingPage from './Containers/LandingPage'
 function App() {
-  const [pageIndex, setPageIndex] = React.useState(0)
+  const [pageIndex, setPageIndex] = React.useState(-1)
   const theme = useTheme()
   const isDesktopLayout = useMediaQuery(theme.breakpoints.up("sm"))
   const [menuDrawerOpen, setMenuDrawerOpen] = React.useState(false)
